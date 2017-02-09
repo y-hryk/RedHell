@@ -1,0 +1,57 @@
+current directory: /vagrant/myApp/vendor/bundler/ruby/2.4.0/gems/puma-3.7.0/ext/puma_http11
+/home/vagrant/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20170130-32392-1r6op21.rb extconf.rb 
+checking for BIO_read() in -lcrypto... yes
+checking for SSL_CTX_new() in -lssl... yes
+checking for openssl/bio.h... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /vagrant/myApp/vendor/bundler/ruby/2.4.0/extensions/x86_64-linux/2.4.0-static/puma-3.7.0/mkmf.log
+
+current directory: /vagrant/myApp/vendor/bundler/ruby/2.4.0/gems/puma-3.7.0/ext/puma_http11
+make "DESTDIR=" clean
+
+current directory: /vagrant/myApp/vendor/bundler/ruby/2.4.0/gems/puma-3.7.0/ext/puma_http11
+make "DESTDIR="
+compiling http11_parser.c
+In file included from ext/puma_http11/http11_parser.rl:8:0:
+ext/puma_http11/http11_parser.rl: 関数 ‘puma_parser_execute’ 内:
+ext/puma_http11/http11_parser.rl:111:17: 警告: 符号付きと符号無しの整数式の間での比較です [-Wsign-compare]
+ext/puma_http11/http11_parser.rl: トップレベル:
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-self-assign" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-constant-logical-operand" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-parentheses-equality" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-tautological-compare" です [デフォルトで有効]
+compiling io_buffer.c
+compiling mini_ssl.c
+mini_ssl.c: 関数 ‘engine_init_server’ 内:
+mini_ssl.c:153:3: 警告: ISO C90 は宣言とコードの混合を禁止しています [-Wdeclaration-after-statement]
+   ID sym_cert = rb_intern("cert");
+   ^
+mini_ssl.c:158:3: 警告: ISO C90 は宣言とコードの混合を禁止しています [-Wdeclaration-after-statement]
+   ID sym_ca = rb_intern("ca");
+   ^
+mini_ssl.c:180:3: 警告: ISO C90 は宣言とコードの混合を禁止しています [-Wdeclaration-after-statement]
+   DH *dh = get_dh1024();
+   ^
+mini_ssl.c:184:3: 警告: ISO C90 は宣言とコードの混合を禁止しています [-Wdeclaration-after-statement]
+   EC_KEY *ecdh = EC_KEY_new_by_curve_name(NID_secp521r1);
+   ^
+mini_ssl.c: 関数 ‘raise_error’ 内:
+mini_ssl.c:241:6: 警告: 関数は属性 ‘noreturn’ の候補のようです [-Wsuggest-attribute=noreturn]
+ void raise_error(SSL* ssl, int result) {
+      ^
+mini_ssl.c: トップレベル:
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-self-assign" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-constant-logical-operand" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-parentheses-equality" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-tautological-compare" です [デフォルトで有効]
+compiling puma_http11.c
+linking shared-object puma/puma_http11.so
+
+current directory: /vagrant/myApp/vendor/bundler/ruby/2.4.0/gems/puma-3.7.0/ext/puma_http11
+make "DESTDIR=" install
+make: Warning: File `puma_http11.so' has modification time 0.0084 s in the future
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20170130-32392-izj20l/puma
+make: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.
